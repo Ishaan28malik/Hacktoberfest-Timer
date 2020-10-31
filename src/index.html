@@ -5,9 +5,11 @@
     </head>
 
     <body>
-    <h1>The Hacktoberfest end in: </h1>
+    <h1 id="title">The Hacktoberfest end in: </h1>
     <h1 id="Countdown"></h1>
-    <h2>Go ahead and make some PRs</h2>
+    <h2 id="subtitle">Go ahead and make some PRs</h2>
+    <button id="changeDarkTheme" type="button">Dark theme</button>
+    <button id="changeWhiteTheme" type="button">White theme</button>
 
         <script>
             //Set the Date the Countdown counts down to
@@ -40,6 +42,20 @@
 
 
             },1000);
+            var darkThemeButton = document.getElementById("changeDarkTheme");
+            darkThemeButton.onclick = function() {
+                document.body.style.backgroundColor = "#111";
+                document.getElementById("Countdown").style.color="#fff";
+                document.getElementById("title").style.color="#fff";
+                document.getElementById("subtitle").style.color="#fff";
+            }
+            var whiteThemeButton = document.getElementById("changeWhiteTheme");
+            whiteThemeButton.onclick = function() {
+                document.body.style.backgroundColor = "#fff";
+                document.getElementById("Countdown").style.color="#000";
+                document.getElementById("title").style.color="#000";
+                document.getElementById("subtitle").style.color="#000";
+            }
         </script>
     <style>
         h1{
@@ -51,6 +67,28 @@
             text-align: center;
             font-size: 40px;
             margin-top: 0px;
+        }
+        #changeDarkTheme {
+            position:fixed;
+            width:60px;
+            height:60px;
+            bottom:40px;
+            right:40px;
+            background-color:#0C9;
+            color:#FFF;
+            text-align:center;
+            box-shadow: 2px 2px 3px #999;
+        }
+        #changeWhiteTheme {
+            position:fixed;
+            width:60px;
+            height:60px;
+            bottom:120px;
+            right:40px;
+            background-color:#0C9;
+            color:#FFF;
+            text-align:center;
+            box-shadow: 2px 2px 3px #999;
         }
     </style>
 
